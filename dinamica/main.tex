@@ -1,1 +1,61 @@
+%
+% main document
+%
+\documentclass[a4paper]{book}
+\usepackage[T1]{fontenc}
+\usepackage[brazilian]{babel}
+\usepackage{cite}
+\title{Dinâmica de Rotores para Engenheiros}
+\author{Francisco José Doubrawa Filho}
+\date{October 17, 2022} 
+\begin{document}
+\maketitle
+\chapter{Prefácio}
+O estudo de sistemas girantes, partiu de modelos muito simples, como o trabalho publicado por RANKINE (1869) no qual eram previstas precessão e deflexão sem limites. Conforme \cite{genta05}, De Laval\footnote{Carl Gustaf Patrik de Laval (Orsa, Dalarna, 9 de Maio de 1845 - Estocolmo, 2 de Fevereiro de 1913) foi um engenheiro e inventor sueco, que fez grandes contribuições no projeto da turbina a vapor e na maquinaria de ordenha do leite.}, posteriormente em 1889, construiu com sucesso máquinas centrífugas e turbinas que operavam acima da primeira rotação crítica. DUNKERLEY (1894) publicou um estudo sobre vibrações em eixos e utilizou pela primeira vez o termo “rotação crítica”.
+Outro pioneiro JEFFCOTT (1919), modelou um rotor de forma simples mas consistente até a rotação crítica. Grandes avanços foram obtidos por STODOLA (1927) na teoria da operação super-crítica (acima da rotação crítica). SMITH (1933) publicou um artigo sobre estabilidade introduzida pelo amortecimento. Posteriormente, MYKLESTAD (1944), PROHL (1945) e outros desenvolveram o método de cálculo da rotação crítica através de matrizes de transferência, que ainda encontra aplicação atualmente.
+O modelo numérico para sistemas rotativos está muito bem desenvolvido, podendo-se citar vários autores como LALANNE e FERRARIS (2001), GENTA (2005) e VANCE (1988), entre outros. Estes autores descrevem um sistema girante através de equações diferenciais gerais do movimento, utilizando matrizes consistentes de massa, rigidez e amortecimento considerando o efeito giroscópico. Estas matrizes, por sua vez, podem ser obtidas através de modelos discretos finitos, em geral para elementos finitos de viga, disco e mancais, como proposto por LALANNE e FERRARIS (2001) e que possibilita simulações com resultados precisos.
+\frontmatter
+\mainmatter
+\chapter{Introdução}
+\addcontentsline{toc}{section}{Introdução}
+A dinâmica de rotores vem ganhando importância significativa na medida em que máquinas rotativas ganham massa ou rotação. A medida que essa massa aumenta, uma rotação característica do sistema, denominada de crítica, pode ficar inferior à nominal. Neste caso, em dado momento, durante a aceleração da máquina, o fenômeno da ressonância vai se manifestar em maior ou menor grau, conforme o conforme o amortecimento presente no sistema. Essa manifestação se dá através do aumento do nível de vibração e do ruido, podendo inclusive, se elevar a um patamar perigoso e destrutivo. O mesmo pode acontecer quando se aumenta a rotação para atender alguma necessidade, de processo, por exemplo.
+Por rotação crítica se entende a rotação na qual ocorre a correspondência entre uma frequência natural, geralmente a de flexão do eixo e uma excitação, em geral o desbalanceamento.
+Na figura abaixo um eixo com um disco em seu centro e suportado por mancais nas extremidades gira à uma rotação w onde se observam o eixo sem e com flexão.
+Sempre que há uma massa não perfeitamente distribuída em rotação, surge uma força proporcional à essa massa e ao quadrado desta frequência, sendo normalmente, suficiente para excitar uma frequência natural de flexão. Essa massa é chamada de desbalanceamento residual e pode ser classificada em termos da massa e rotação do sistema, como apresentado na norma ISO 1940.
+\bibliography{biblio/bibliografia}
+\bibliographystyle{plain}
+\appendix{Anexos}
+\addcontentsline{toc}{Anexos}
+\section{Notas de balanceamento ISO 21940-11}
+As classes de balanceamento são uma característica de qualidade usada para comparar rotores de diferentes pesos e velocidades de rotação em termos de quão bem eles devem ser balanceados.
+Os requisitos de tolerância de balanceamento para rotores com comportamento rígido são especificados na ISO 21940-11. A parte 11 da norma inclui, além dos números necessários de planos de correção e métodos para verificar o desbalanceamento residual, uma definição das Tolerâncias de Balanceamento e dos Graus de Balanceamento.
+O que são notas de balanceamento “G”
+Com base na experiência, o padrão ISO recomenda determinados graus de balanceamento para tipos de rotor individuais. Essas recomendações podem ser utilizadas pelo fabricante de componentes e máquinas para determinar a tolerância de balanceamento necessária para obter uma operação satisfatória do rotor em serviço.
+O Balance Quality Grade (abbr. G) é expresso em milímetros por segundo (mm/s) e define a velocidade de vibração máxima permitida de um centro de gravidade de uma peça de trabalho em rotação. É um produto da
 
+G = eper x Ω
+
+eper = excentricidade permitida do centro de gravidade em mm
+Ω = máx. Velocidade Angular Operacional em rad/s (\Omega = RPM x \pi/30)
+
+Exemplo: G 2.5 = velocidade de vibração máxima permitida de c.o.g. é 2.5 mm/s
+O que são tolerâncias de balanceamento
+
+Todos os Rotores possuem um desequilíbrio inicial que causa vibração durante a rotação. A eliminação completa do desbalanceamento em um rotor é técnica e praticamente impossível. Em vez disso, os requisitos técnicos determinam com que precisão um rotor deve ser balanceado para uma vibração satisfatória.
+
+Uma vez que o grau de qualidade de balanceamento “G” é determinado pela aplicação, o desbalanceamento residual permitido Uper pode ser calculado multiplicando a excentricidade eper vezes a massa do rotor m:
+
+Superior = m x eper = m x G/\Omega
+
+Em vez de calcular o Desequilíbrio Residual, pode-se utilizar o Gráfico mostrado a seguir.
+Como o balanceamento de tolerâncias pode economizar dinheiro
+
+Além dos requisitos técnicos, considerações econômicas também são necessárias ao determinar a tolerância de balanceamento. Quanto menor ou mais apertada for a tolerância do rotor, mais demorado e, portanto, mais caro será alcançar. É por isso que um rotor deve ser balanceado apenas com a tolerância necessária, em vez de balancear o mais baixo possível.
+Usando notas de balanceamento para determinar a tolerância de balanceamento necessária
+
+Três etapas são necessárias para usar graus de balanceamento para determinar a tolerância de balanceamento permitida de um rotor:
+1. Defina a nota de balanceamento por aplicativo
+
+Selecione um grau de balanceamento na Tabela, com base no tipo de rotor e aplicação.
+\end{document}
+% end
